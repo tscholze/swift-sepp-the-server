@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Sepp the Server Directory Listing">
+        <meta name="author" content="Tobias Scholze">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <title>Sepp Directory Listing of "{{ folder }}"</title>
+    
+        <style>
+            /* External imports */
+            
+            @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+            
+            /* Global styles */
+            
+            html, body
+            {
+                height: 100%;
+                background: #c0c0c0;
+                font-family: 'Open Sans', sans-serif;
+            }
+            
+            header, footer
+            {
+                text-align: center;
+            }
+            
+            h1, h2, ul, p
+            {
+                margin: 0px;
+                padding: 0px;
+            }
+            
+            h1, h2
+            {
+                padding-bottom: 5px;
+            }
+            
+            h1
+            {
+                border-bottom: 1px solid #888888;
+            }
+            
+            h2
+            {
+                padding-top: 5px;
+            }
+            
+            a, a:active, a:visited
+            {
+               color: #888888;    
+            }
+            
+            a:hover
+            {
+                color: #509600;
+            }
+            
+            li
+            {
+                list-style: none;
+                margin-right: 10px;
+            }
+            
+            li:last-child
+            {
+                margin-right: 0px;
+            }
+
+            header
+            {
+                margin-bottom: 35px;
+            }
+
+            header img
+            {
+                border: 1px solid #000000;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+            }
+            
+            content
+            {
+                font-size: 0.75rem;
+            }
+
+            content p
+            {
+                text-align:justify;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+            content ul li
+            {
+                font-size: 1rem;
+                margin-left: 25px;
+            }
+
+            footer
+            {
+                height: 50px;
+                margin-top: 15px;
+                font-size: 0.75em;
+                color: #dadada;
+            }
+            
+            a
+            {
+                text-decoration: none;
+            }
+            
+            footer a
+            {
+                color: inherit;
+            }
+            
+            /* Custom classes */
+            
+            .card
+            {
+                background: #ffffff;
+                width: 600px;
+                margin: auto;
+                padding: 15px;
+                margin-top: 25px;
+                box-shadow: 10px 10px 5px #aaa;
+                border: #aaa 1px solid;
+            }
+
+            /* Font awesome */
+            .fa
+            {
+                color: #888888;
+                padding-right: 5px;
+            }
+
+            .fa:hover
+            {
+                color: #509600;
+                text-shadow: 1px 1px 1px #bababa;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+            <header>
+                <h1>Listing for folder "{{ folder }}"</h1>
+            </header>
+            <content>
+                <ul>
+                    {{{ listing }}}
+                </ul>
+            </content>
+        </div>
+
+        <footer>
+            <strong>Sepp</strong> is based on the great <a href="https://github.com/dunkelstern/twohundred">twohundred</a> which is developed by <a href="http://twitter.com/dunkelstern">@dunkelstern</a>.
+        </footer>
+    </body>
+</html>
