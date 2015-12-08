@@ -1,6 +1,6 @@
 <div style="text-align:center">
-	<a href="https://github.com/tscholze/swift-sepp-the-server/blob/master/docs/logo.png">
-		<img src="https://github.com/swift-sepp-the-server/blob/master/docs/logo.png" height="300px" />
+	<a href="https://raw.githubusercontent.com/tscholze/swift-sepp-the-server/master/docs/logo.png">
+		<img src="https://raw.githubusercontent.com/tscholze/swift-sepp-the-server/master/docs/logo.png" height="300px" />
 	</a>
 </div>
 
@@ -22,20 +22,21 @@ Sepp has no features, no roadmap and has no life expectancy. He's just a new fri
 1. Enjoy
 
 <div style="text-align:center">
-        <a href="https://github.com/tscholze/swift-sepp-the-server/blob/master/docs/control.png">
-                <img src="https://github.com/swift-sepp-the-server/blob/master/docs/control.png" height="300px" />
+        <a href="https://raw.githubusercontent.com/tscholze/swift-sepp-the-server/master/docs/docs/control.png">
+                <img src="https://raw.githubusercontent.com/tscholze/swift-sepp-the-server/master/docs/control.png" height="300px" />
         </a>
 </div>
 
 <div style="text-align:center">
-        <a href="https://github.com/tscholze/swift-sepp-the-server/blob/master/docs/listing.png">
-                <img src="https://github.com/swift-sepp-the-server/blob/master/docs/listing.png" height="300px" />
+        <a href="https://raw.githubusercontent.com/tscholze/swift-sepp-the-server/master/docs/listing.png">
+                <img src="https://raw.githubusercontent.com/tscholze/swift-sepp-the-server/master/docs/listing.png" height="300px" />
         </a>
 </div>
 
 ## Thanks to:
 * [Dunkelstern](https://github.com/dunkelstern/twohundred) for providing the great twohundred webserver
 * [Lemmling](http://openclipart.org/user-detail/lemmling) for providing the awesome icon
+* [Mustache](http://mustache.github.io) for bringing Mustache template enginge to Swift
 
 ## License 
 Quotes is licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License) License. 
