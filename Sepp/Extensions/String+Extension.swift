@@ -10,15 +10,15 @@ import Foundation
 
 extension String
 {
-    enum FileType
+    enum FileType: String
     {
-        case Jpeg
-        case Png
-        case Gif
-        case Html
-        case Css
-        case JavaScript
-        case Stream
+        case Jpeg       = "jpg"
+        case Png        = "png"
+        case Gif        = "gif"
+        case Html       = "html"
+        case Css        = "css"
+        case JavaScript = "js"
+        case Stream     = ""
         
         /// Represents the ISO string value of the file's mime type.
         /// E.g.: "image/jpeg"
@@ -48,65 +48,36 @@ extension String
                 return "application/octet-stream"
             }
         }
-        
-        /// Represents the suffix / extenion if a file type
-        /// E.g.: a Jpeg image -> .jpg
-        var suffix: String
-        {
-            switch self
-            {
-            case .Jpeg:
-                return "jpg"
-                
-            case .Png:
-                return "png"
-                
-            case .Gif:
-                return "gif"
-                
-            case .Html:
-                return "html"
-                
-            case .Css:
-                return "css"
-                
-            case .JavaScript:
-                return "js"
-                
-            case .Stream:
-                return ""
-            }
-        }
     }
     
     var hasJpgSuffix: Bool
     {
-        return hasSuffix(FileType.Jpeg.suffix)
+        return hasSuffix(FileType.Jpeg.rawValue)
     }
     
     var hasPngSuffix: Bool
     {
-        return hasSuffix(FileType.Png.suffix)
+        return hasSuffix(FileType.Png.rawValue)
     }
     
     var hasGifSuffix: Bool
     {
-        return hasSuffix(FileType.Gif.suffix)
+        return hasSuffix(FileType.Gif.rawValue)
     }
     
     var hasHtmlSuffix: Bool
     {
-        return hasSuffix(FileType.Html.suffix)
+        return hasSuffix(FileType.Html.rawValue)
     }
     
     var hasCssSuffix: Bool
     {
-        return hasSuffix(FileType.Css.suffix)
+        return hasSuffix(FileType.Css.rawValue)
     }
     
     var hasJavaScriptSuffix: Bool
     {
-        return hasSuffix(FileType.JavaScript.suffix)
+        return hasSuffix(FileType.JavaScript.rawValue)
     }
     
     var fileType: FileType
@@ -116,28 +87,11 @@ extension String
             return FileType.Stream
         }
         
-        switch suffix.lowercaseString
+        guard let _fileType = FileType(rawValue: suffix) else
         {
-        case FileType.Jpeg.suffix:
-            return FileType.Jpeg
-            
-        case FileType.Png.suffix:
-            return FileType.Png
-            
-        case FileType.Gif.suffix:
-            return FileType.Gif
-            
-        case FileType.Html.suffix:
-            return FileType.Html
-            
-        case FileType.JavaScript.suffix:
-            return FileType.JavaScript
-            
-        case FileType.Css.suffix:
-            return FileType.Css
-            
-        default:
             return FileType.Stream
         }
+        
+        return _fileType
     }
 }

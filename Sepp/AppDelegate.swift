@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate
     
     let server = Sepp(listenPort: SeppSetting.Port)
     
-    // MARK: - Init
+    // MARK: - Init -
 
     func applicationDidFinishLaunching(aNotification: NSNotification)
     {
@@ -34,7 +34,19 @@ class AppDelegate: NSObject, NSApplicationDelegate
 
     func applicationWillTerminate(aNotification: NSNotification)
     {
-        // stop server
+        print("Terminating server ...")
+    }
+    
+    // MARK: - Helper -
+    
+    /// Returns true if the changed working directory ends to the application name
+    private func workingDirectoryChangeWasSuccessful() -> Bool
+    {
+        var cwd = [CChar](count: Int(FILENAME_MAX), repeatedValue: 0)
+        getcwd(&cwd, Int(FILENAME_MAX))
+        let dirString = String(CString: cwd, encoding: NSUTF8StringEncoding)!
+        
+        return dirString == SeppSetting.WorkingDirectory
     }
     
     // MARK: - Event handler -
@@ -78,17 +90,14 @@ class AppDelegate: NSObject, NSApplicationDelegate
         NSWorkspace.sharedWorkspace().openURL(url)
     }
     
-    // MARK: - Helper -
-    
-    
-    /// Returns true if the changed working directory ends to the application name
-    private func workingDirectoryChangeWasSuccessful() -> Bool
+    @IBAction func onOpenGithubLinkClicked(sender: AnyObject)
     {
-        var cwd = [CChar](count: Int(FILENAME_MAX), repeatedValue: 0)
-        getcwd(&cwd, Int(FILENAME_MAX))
-        let dirString = String(CString: cwd, encoding: NSUTF8StringEncoding)!
+        guard let url = NSURL(string: "https://github.com/tscholze/swift-sepp-the-server") else
+        {
+            return
+        }
         
-        return dirString == SeppSetting.WorkingDirectory
+        NSWorkspace.sharedWorkspace().openURL(url)
     }
 }
 

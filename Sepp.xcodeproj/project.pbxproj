@@ -16,7 +16,6 @@
 		F63390BC1C1617A2005F9229 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63390BA1C1617A2005F9229 /* MainMenu.xib */; };
 		F67CAF251C176920006ECB79 /* SeppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAF241C176920006ECB79 /* SeppSetting.swift */; };
 		F67CAF281C176932006ECB79 /* HTTPRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAF261C176932006ECB79 /* HTTPRequest+Extensions.swift */; };
-		F67CAF291C176932006ECB79 /* NSURL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAF271C176932006ECB79 /* NSURL+Extension.swift */; };
 		F67CAF2C1C17694D006ECB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67CAF2B1C17694D006ECB79 /* Assets.xcassets */; };
 		F67CAF2F1C176988006ECB79 /* sepp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67CAF2E1C176988006ECB79 /* sepp.swift */; };
 		F6C455DC1C1617FF004A71B8 /* twohundred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C455D91C1617E3004A71B8 /* twohundred.framework */; };
@@ -54,7 +53,6 @@
 		F63390BD1C1617A2005F9229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F67CAF241C176920006ECB79 /* SeppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SeppSetting.swift; path = Configuration/SeppSetting.swift; sourceTree = "<group>"; };
 		F67CAF261C176932006ECB79 /* HTTPRequest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HTTPRequest+Extensions.swift"; path = "Extensions/HTTPRequest+Extensions.swift"; sourceTree = "<group>"; };
-		F67CAF271C176932006ECB79 /* NSURL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+Extension.swift"; path = "Extensions/NSURL+Extension.swift"; sourceTree = "<group>"; };
 		F67CAF2B1C17694D006ECB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		F67CAF2E1C176988006ECB79 /* sepp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = sepp.swift; path = Classes/sepp.swift; sourceTree = "<group>"; };
 		F6C455D31C1617E3004A71B8 /* twohundred.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = twohundred.xcodeproj; path = twohundred/twohundred.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -189,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				F67CAF261C176932006ECB79 /* HTTPRequest+Extensions.swift */,
-				F67CAF271C176932006ECB79 /* NSURL+Extension.swift */,
 				F6C455E01C1619D1004A71B8 /* String+Extension.swift */,
 			);
 			name = Extensions;
@@ -345,7 +342,6 @@
 				F63390B71C1617A2005F9229 /* AppDelegate.swift in Sources */,
 				F67CAF2F1C176988006ECB79 /* sepp.swift in Sources */,
 				F6C455E11C1619D1004A71B8 /* String+Extension.swift in Sources */,
-				F67CAF291C176932006ECB79 /* NSURL+Extension.swift in Sources */,
 				F67CAF251C176920006ECB79 /* SeppSetting.swift in Sources */,
 				F62B08301C1772D700F2B598 /* TemplateBuilder.swift in Sources */,
 				F67CAF281C176932006ECB79 /* HTTPRequest+Extensions.swift in Sources */,
